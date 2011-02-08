@@ -9,6 +9,7 @@ Source0:	http://rubyforge.org/frs/download.php/67118/rbtree-%{version}.tar.gz
 URL:		http://raa.ruby-lang.org/project/ruby-rbtree/
 BuildRequires:	rpmbuild(macros) >= 1.272
 BuildRequires:	ruby
+BuildRequires:	ruby-devel
 Requires:	ruby >= 1:1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
