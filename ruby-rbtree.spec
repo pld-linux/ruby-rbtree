@@ -7,6 +7,8 @@ Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/67118/rbtree-%{version}.tar.gz
 # Source0-md5:	1bb99fba5b15bcfeaae75271c3c60043
 URL:		http://raa.ruby-lang.org/project/ruby-rbtree/
+BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	ruby
 Requires:	ruby >= 1:1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
