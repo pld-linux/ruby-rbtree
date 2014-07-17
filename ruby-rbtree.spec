@@ -1,7 +1,7 @@
 Summary:	Ruby/RBTree
 Name:		ruby-rbtree
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/67118/rbtree-%{version}.tar.gz
