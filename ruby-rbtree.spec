@@ -1,12 +1,13 @@
+%define pkgname rbtree
 Summary:	Ruby/RBTree
-Name:		ruby-rbtree
-Version:	0.3.0
-Release:	4
+Name:		ruby-%{pkgname}
+Version:	0.4.2
+Release:	1
 License:	BSD
 Group:		Development/Languages
-Source0:	http://rubyforge.org/frs/download.php/67118/rbtree-%{version}.tar.gz
-# Source0-md5:	1bb99fba5b15bcfeaae75271c3c60043
-URL:		http://raa.ruby-lang.org/project/ruby-rbtree/
+Source0:	https://rubygems.org/downloads/%{pkgname}-%{version}.gem
+# Source0-md5:	096e8561315e2c382405369391510b93
+URL:		http://rbtree.rubyforge.org/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -18,7 +19,7 @@ is the almost same as Hash, so simply you can consider RBTree sorted
 Hash.
 
 %prep
-%setup -qn rbtree-%{version}
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %{__ruby} extconf.rb \
@@ -31,7 +32,7 @@ Hash.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} -j1 install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -39,5 +40,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog LICENSE README test.rb
+%doc LICENSE README test.rb
 %attr(755,root,root) %{ruby_vendorarchdir}/rbtree.so
