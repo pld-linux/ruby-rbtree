@@ -2,7 +2,7 @@
 Summary:	Ruby/RBTree
 Name:		ruby-%{pkgname}
 Version:	0.4.2
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 Source0:	https://rubygems.org/downloads/%{pkgname}-%{version}.gem
